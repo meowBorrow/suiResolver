@@ -1,0 +1,49 @@
+{
+  "name": "fusion-plus-protocol",
+  "version": "1.0.0",
+  "description": "Gasless, intent-based cross-chain swap protocol",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:contracts && npm run install:sui",
+    "install:contracts": "cd packages/contracts && forge install",
+    "install:sui": "echo 'Sui modules installed'",
+    "deploy:dev": "npm run deploy:eth:dev && npm run deploy:sui:dev",
+    "deploy:eth:dev": "cd packages/contracts && forge script script/DeployDev.s.sol --rpc-url http://localhost:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+    "deploy:sui:dev": "cd packages/sui-modules && sui client publish --gas-budget 100000000",
+    "test:contracts": "cd packages/contracts && forge test",
+    "test:sui": "cd packages/sui-modules && sui move test",
+    "orderbook": "cd packages/orderbook && npm run dev",
+    "resolver": "cd packages/resolver && npm run dev",
+    "frontend": "cd packages/frontend && npm run dev",
+    "dev:setup": "./scripts/dev-setup.sh",
+    "lint": "eslint packages/*/src --ext .js,.ts,.tsx",
+    "format": "prettier --write packages/*/src/**/*.{js,ts,tsx}",
+    "clean": "rm -rf packages/*/node_modules packages/*/dist packages/contracts/out packages/contracts/cache"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
+  },
+  "keywords": [
+    "cross-chain",
+    "fusion",
+    "intent-based",
+    "gasless",
+    "ethereum",
+    "sui",
+    "defi"
+  ],
+  "author": "Fusion+ Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "ethers": "^6.15.0"
+  }
+}

@@ -1,0 +1,25 @@
+# Fusion+ Protocol Deployment Addresses
+# Local Sui Network (localhost:9000)
+
+Package ID: 0xd6d0c744bcf4d6743f95f2ceb99544f78a33903352879f514e4531b5e85e583b
+StakingPool: 0xf1f8270eb1c9694e14846f74f218dc2b06f8fef4ed7be08c1477d9bcb7bd590e
+ResolverRegistry: 0x8962f12467948add8457c1c2f938250cb05610ed72d25b338fdfbccbdd11af28
+UpgradeCap: 0xcc5db6fd5f3103887d0bbf30ed7e6fc3d601d5d388db4dce31a623264df9f6ad
+
+# Deployment Details
+Network: Local Sui (Epoch 4)
+Deployer Address: 0xed965c14c3a0e9edb3865ae650d0d6e61747591c1cea5d078b3fcb91f2ceb586
+Transaction: 2iR5MmRR7Bp59b95cNF38qsveFoJ4fw64o9qd2gRur7J
+Gas Used: 28,369,880 MIST
+
+# Test Results
+✅ Contract Compilation: Success (with warnings only)
+✅ Contract Deployment: Success
+✅ Resolver Registration: Success (staked 200 SUI)
+✅ View Functions: Working
+✅ Events: ResolverRegistered event emitted
+
+# Next Steps
+- Deploy Ethereum contracts on Anvil
+- Start orderbook and resolver services
+- Test cross-chain functionality

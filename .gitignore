@@ -1,0 +1,40 @@
+node_modules/
+dist/
+build/
+out/
+cache/
+
+# Environment files
+# .env
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Foundry
+packages/contracts/out/
+packages/contracts/cache/
+packages/contracts/broadcast/
+
+# Sui
+packages/sui-modules/build/
+
+# Testing
+coverage/
+.nyc_output
+# SigScan generated signatures
+signatures/
