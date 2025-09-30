@@ -4,6 +4,7 @@
 
 A gasless, intent-based cross-chain swap protocol enabling atomic swaps between Ethereum and Sui networks with competitive resolver execution.A comprehensive cross-chain safe escrow system between **Ethereum** and **Sui** networks using hash-locked time contracts (HTLCs) with dual hash support (keccak256 and sha256) for maximum compatibility.
 
+<img width="3840" height="2336" alt="Untitled diagram _ Mermaid Chart-2025-09-30-161256" src="https://github.com/user-attachments/assets/a287a045-af7e-4955-b02d-da317294102d" />
 
 
 ## Quick Start## 🌟 Features
